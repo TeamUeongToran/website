@@ -1,0 +1,65 @@
+/* TeamUeongToran — small studio site. Warm night-sky palette for a cat-led pixel game studio. */
+:root {
+  --bg: #f6f4fb;
+  --surface: #ffffff;
+  --ink: #221f33;
+  --muted: #615c78;
+  --rule: #dcd8ea;
+  --accent: #4f46c8;
+  --accent-ink: #ffffff;
+  --gold: #c98a1b;
+  --font-display: "Press Start 2P", ui-monospace, monospace;
+  --font-body: "Gowun Dodum", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14121f; --surface: #1c1a2b; --ink: #ece9f7; --muted: #a29cc0; --rule: #2e2b44;
+    --accent: #8f87ff; --accent-ink: #14121f; --gold: #f0b84a;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.7; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: 860px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+
+header.site { border-bottom: 1px solid var(--rule); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-block: 18px; }
+.logo { font-family: var(--font-display); font-size: 0.85rem; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+.logo .mark { width: 22px; height: 22px; image-rendering: pixelated; }
+nav.site { display: flex; gap: 18px; font-size: 0.95rem; }
+nav.site a { color: var(--muted); text-decoration: none; }
+nav.site a:hover, nav.site a[aria-current="page"] { color: var(--ink); }
+
+.hero { padding-block: 72px 56px; display: grid; gap: 18px; }
+.hero .eyebrow { font-family: var(--font-display); font-size: 0.7rem; color: var(--gold); letter-spacing: 0.04em; }
+.hero h1 { font-size: clamp(1.9rem, 5vw, 2.8rem); line-height: 1.25; margin: 0; text-wrap: balance; font-weight: 400; }
+.hero p { margin: 0; color: var(--muted); max-width: 60ch; }
+
+section.block { padding-block: 40px; border-top: 1px solid var(--rule); display: grid; gap: 16px; }
+section.block h2 { font-family: var(--font-display); font-size: 0.85rem; letter-spacing: 0.03em; margin: 0; color: var(--ink); }
+.game { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 22px 24px; display: grid; gap: 8px; }
+.game h3 { margin: 0; font-size: 1.35rem; font-weight: 400; }
+.game .status { display: inline-block; font-size: 0.8rem; color: var(--accent); border: 1px solid currentColor; border-radius: 999px; padding: 0 10px; width: fit-content; }
+.game p { margin: 0; color: var(--muted); }
+
+dl.info { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 20px; margin: 0; font-size: 0.95rem; }
+dl.info dt { color: var(--muted); }
+dl.info dd { margin: 0; overflow-wrap: anywhere; }
+
+footer.site { border-top: 1px solid var(--rule); margin-top: 40px; }
+footer.site .wrap { padding-block: 28px 40px; font-size: 0.85rem; color: var(--muted); display: grid; gap: 6px; }
+
+/* Policy pages */
+.policy { padding-block: 48px 24px; display: grid; gap: 8px; max-width: 70ch; }
+.policy h1 { font-size: 1.8rem; font-weight: 400; margin: 0 0 4px; text-wrap: balance; }
+.policy h2 { font-size: 1.1rem; margin: 28px 0 4px; }
+.policy p, .policy li { color: var(--ink); }
+.policy ul { padding-left: 1.2em; margin: 4px 0; }
+.policy .meta { color: var(--muted); font-size: 0.9rem; }
+.lang-switch { display: flex; gap: 10px; font-size: 0.9rem; margin-bottom: 8px; }
+hr.lang { border: 0; border-top: 1px dashed var(--rule); margin: 40px 0 8px; }
+
+@media (max-width: 480px) { dl.info { grid-template-columns: minmax(0, 1fr); gap: 0 0; } dl.info dd { margin-bottom: 8px; } }

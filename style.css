@@ -70,6 +70,6 @@ footer.site .wrap { padding-block: 28px 40px; font-size: 0.85rem; color: var(--m
 @media (max-width: 480px) { dl.info { grid-template-columns: minmax(0, 1fr); gap: 0; } dl.info dd { margin-bottom: 8px; } .brand span { display: none; } }
 
 .game { padding: 0; overflow: hidden; }
-.game .shot { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--rule); }
+.game .shot { display: block; width: 100%; aspect-ratio: 1200 / 688; object-fit: cover; background: var(--rule); }
 .game .body { padding: 18px 24px 22px; display: grid; gap: 8px; }
 @media (min-width: 720px) { .game { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; } }

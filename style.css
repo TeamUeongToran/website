@@ -59,6 +59,10 @@ dl.info dd { margin: 0; overflow-wrap: anywhere; }
 
 footer.site { border-top: 1px solid var(--rule); margin-top: 40px; }
 footer.site .wrap { padding-block: 28px 40px; font-size: 0.85rem; color: var(--muted); display: grid; gap: 6px; }
+footer.site .biz { margin: 0; font-size: 0.8rem; line-height: 1.6; text-wrap: pretty; }
+footer.site .biz > span:not(:first-child)::before { content: "|"; margin: 0 0.7em; opacity: 0.5; }
+footer.site .nb { white-space: nowrap; }
+@media (max-width: 640px) { footer.site .biz > span { display: block; } footer.site .biz > span:not(:first-child)::before { content: none; } }
 
 .policy { padding-block: 48px 24px; display: grid; gap: 8px; max-width: 70ch; }
 .policy h1 { font-family: var(--font-display); font-weight: 600; font-size: 2rem; margin: 0 0 4px; text-wrap: balance; }
